@@ -1,0 +1,160 @@
+/* Header styles by Michael*/
+@import '../mixins';
+@import '../vars';
+
+.header {
+    height: 100vh;
+
+    @include flex(center, center, nowrap);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, center;
+
+    overflow: hidden;
+
+    &__aside {
+        max-width: 168px;
+        width: 100%;
+        height: 100%;
+
+        padding-bottom: 25px;
+
+        @include flex(flex-end, center, wrap);
+        flex-direction: column;
+
+        position: relative;
+
+        &:before {
+            width: 2px;
+            height: 100%;
+
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            opacity: .25;
+
+            background-color: $white;
+        }
+    }
+
+    &__logo {
+        width: 280px;
+        height: 168px;
+
+        @include flex(space-between, center, nowrap);
+
+        @include link-font-style(60px, 800, none);
+        text-transform: uppercase;
+
+        transform: rotate(-90deg);
+
+        position: absolute;
+        top: 6%;
+        left: -34%;
+        z-index: 1;
+
+        @include media('<=hd', 'landscape') {
+            width: 280px;
+            height: 80px;
+
+            font-size: 50px;
+
+            justify-content: center;
+        }
+
+        &__second {
+            width: 100%;
+            height: 168px;
+
+            margin-left: 20px;
+            padding: 0 25px;
+
+            @include flex(center, center, nowrap);
+
+            position: relative;
+            
+            background-color: $green;
+
+            &:before {
+                width: 20px;
+                height: 1px;
+
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                z-index: 1;
+
+                background-color: $white;
+            }
+
+            @include media('<=hd', 'landscape') {
+                width: 73%;
+
+                margin-left: 15px;
+
+                padding: 0 15px;
+
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    &__search {
+
+        &-svg {
+            cursor: pointer;
+        }
+    }
+
+    &__day {
+        margin-top: 20px;
+
+        @include font-style(72px, 800);
+
+        @include media('<=hd', 'landscape') {
+            font-size: 50px;
+        }
+    }
+
+    &__time {
+        width: 76px;
+
+        margin-top: 17px;
+
+        @include flex(space-between, center, nowrap);
+
+        @include font-style(16px, 300);
+
+        position: relative;
+
+        &:before {
+            width: 1px;
+            height: 100%;
+
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            z-index: 1;
+
+            background-color: $white;
+        }
+    }
+
+    &__loc {
+        margin-top: 30px;
+
+        @include flex(center, center, nowrap);
+
+        @include link-font-style(12px, 300, none);
+
+        &__city {
+            margin-left: 8px;
+        }
+    }
+}

@@ -1,5 +1,91 @@
 /* Common styles by Michael*/
 
+body {
+    width: 100%;
+
+    margin: 0 auto;
+
+    @include font-style(48px, 800);
+    line-height: 0.8;
+
+    background-color: #041d06;
+}
+
+.section {
+    max-width: 1440px;
+    width: 100%;
+    height: 100vh;
+
+    margin: 0 auto;
+    
+    background-color: $white;
+
+    &__desc {
+        width: auto;
+
+        display: inline-block;
+
+        @include font-style(22px, 400);
+        text-transform: uppercase;
+        letter-spacing: 7.33333px;
+
+        position: relative;
+
+        opacity: .5;
+
+        &-line:before {
+            width: 80px;
+            height: 1px;
+
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -110px;
+            z-index: 1;
+
+            opacity: .5;
+
+            background-color: $white;
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &-slider-controle {
+        width: 70px;
+
+        @include flex(space-between, center, nowrap);
+        
+        cursor: pointer;
+
+        &-svg {
+            cursor: pointer;
+        }
+
+        &--header {
+            position: absolute;
+            top: 40px;
+            right: 80px;
+            z-index: 2;
+        }
+    }
+}
+
+.container {
+    max-width: 1270px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 0 20px;
+
+    position: relative;
+
+    
+    @include media ('<laptop'){
+        padding: 0 15px;
+    }
+}
+
 .sprite {
     display: none;
 }
@@ -8,4 +94,6 @@ img {
     max-width: 100%;
     
     display: block;
+
+    cursor: pointer;
 }

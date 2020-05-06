@@ -1,5 +1,5 @@
-@mixin font-style($color, $ff, $fz, $fw) {
-    color: $color;
+@mixin font-style($fz, $fw) {
+    color: $white;
     font: {
         family: $ff;
         size: $fz;
@@ -7,8 +7,8 @@
     }
 }
 
-@mixin link-font-style($color, $ff, $fz, $fw, $td) {
-    color: $color;
+@mixin link-font-style($fz, $fw, $td) {
+    color: $white;
     font: {
         family: $ff;
         size: $fz;
@@ -22,7 +22,7 @@
     }
 }
 
-@mixin flex($jc, $ai, $flw) {
+@mixin flex ($jc, $ai, $flw) {
     display: flex;
     justify-content: $jc;
     align-items: $ai;

@@ -1,0 +1,39 @@
+/* Nav styles by Michael*/
+@import '../mixins';
+@import '../vars';
+
+.header {
+    
+    &__nav {
+        width: 100%;
+
+        margin-bottom: 35px;
+
+        @include flex(space-between, center, nowrap);
+        flex: 0 0 352px;
+        flex-direction: column;
+
+        @include media('<=hd', 'landscape') {
+            margin-bottom: 25px;
+
+            flex-basis: 320px;
+        }
+
+        &__link {
+            @include link-font-style(14px, 500, none);
+            letter-spacing: 3px;
+            text-align: center;
+
+            @include media('<=hd', 'landscape') {
+                transform: scale(.9);
+            }
+        }
+        &__title {
+            margin-top: 5px;
+
+            @include media('<=hd', 'landscape') {
+                margin-top: 0;
+            }
+        }
+    }
+}

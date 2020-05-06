@@ -1,4 +1,96 @@
 //- ../index.pug
 
-header.header#header
-    h1 Go Surf
+header.header#header.section(style="background-image: url(img/header/header-bg.jpg)")
+    aside.header__aside
+
+        a.header__logo(href="#")
+            div go
+            .header__logo__second surf
+            
+        nav.header__nav
+            a.header__nav__link(href="#")
+                svg.header__nav-svg(width="65" height="55")
+                    use(xlink:href="#surf")
+                .header__nav__title Surf
+
+            a.header__nav__link(href="#")
+                svg.header__nav-svg(width="65" height="55")
+                    use(xlink:href="#travel")
+                .header__nav__title Travel
+
+            a.header__nav__link(href="#")
+                svg.header__nav-svg(width="65" height="55")
+                    use(xlink:href="#camp" style="transform: translateX(8px);")
+                .header__nav__title Sleep
+
+            a.header__nav__link(href="#")
+                svg.header__nav-svg(width="65" height="55")
+                    use(xlink:href="#surfboard")
+                .header__nav__title Shop
+
+        svg.header__search-svg(width="24" height="24")
+            use(xlink:href="#search")
+
+        p.header__day 03
+
+        .header__time
+            div 05
+            time(datetime="2020") 2020
+
+        a.header__loc(href="#")
+            svg.header__loc-svg(width="12" height="12")
+                    use(xlink:href="#point")
+            p.header__loc__city California
+
+    .container
+        .header__inner
+
+            .section-slider-controle.section-slider-controle--header
+                svg.section-slider-controle-svg(width="25" height="21")
+                    use(xlink:href="#arrow-left")
+                svg.section-slider-controle-svg(width="25" height="21")
+                    use(xlink:href="#arrow-right")
+
+            .header__map
+                svg.header__map-svg#header__map(width="1001" height="496")
+                    use(xlink:href="#map")
+
+            .header__content
+                .header__slider
+                    p.section__desc.section__desc-line.section__desc-line--left Surf
+                    h3.header__title#header__title North Shore
+                    p.section__desc.section__desc-line.section__desc-line--left Condition
+                    h3.header__subtitle#header__subtitle Radical
+                    svg.section-slider-controle-svg(width="25" height="21")
+                        use(xlink:href="#arrow-right")
+
+                nav.header__inner__nav#header__inner__nav
+                    a.header__inner__nav__item(href="#" data-shore='North Shore')
+                        .header__inner__nav__data(data-shore='North Shore')
+                        .header__inner__nav__line
+                        .header__inner__nav__text
+                            .header__inner__nav__number 01
+                            .header__inner__nav__title North Shore
+                            
+                    a.header__inner__nav__item(href="#" data-shore='West Shore')
+                        .header__inner__nav__data(data-shore='West Shore')
+                        .header__inner__nav__line.active
+                        .header__inner__nav__text
+                            .header__inner__nav__number 02
+                            .header__inner__nav__title West Shore
+                    
+                    a.header__inner__nav__item(href="#" data-shore='East Shore')
+                        .header__inner__nav__data(data-shore='East Shore')
+                        .header__inner__nav__line
+                        .header__inner__nav__text
+                            .header__inner__nav__number 03
+                            .header__inner__nav__title East Shore
+
+                    a.header__inner__nav__item(href="#" data-shore='South Shore')
+                        .header__inner__nav__data(data-shore='South Shore')
+                        .header__inner__nav__line
+                        .header__inner__nav__text
+                            .header__inner__nav__number 04
+                            .header__inner__nav__title South Shore
+
+

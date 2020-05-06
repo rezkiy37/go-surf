@@ -1,15 +1,15 @@
 /* basics */
 @import 'libs';
 @import 'reset';
+@import 'media';
 @import 'vars';
 @import 'mixins';
 @import 'keyframes';
 @import 'common';
+@import 'blocks/svg';
 
 /* blocks */
-body {
-    @include link-font-style($white, $ff, 48px, 800, underline);
-    background-color: #000;
-}
-
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/header-inner';
 
